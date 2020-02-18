@@ -17,7 +17,7 @@ class BlogPage extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.dispatch(postActions.createPost(this.state.posts))
+        this.props.dispatch(postActions.createPost(this.state.posts));
     }
 
     render () {
@@ -30,11 +30,13 @@ class BlogPage extends Component {
                     <input type="submit" />
                 </form>
                 { this.props.posts.map((post) => {
+                    return (
                     <div key={post.title}>
                         <p>
-                            {post}
+                            {post.title}
                         </p>
                     </div>
+                    )
                 })}
             </div>
         )
