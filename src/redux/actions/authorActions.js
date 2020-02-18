@@ -1,5 +1,6 @@
-export default createPost(post) {
+export function createPost(post) {
     return {
-        type: "CREATE_POST", post
+        type: "CREATE_POST",
+        post
     };
 }

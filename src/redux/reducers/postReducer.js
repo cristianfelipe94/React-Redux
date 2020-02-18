@@ -1,6 +1,6 @@
 export default function postReducer(state= [], action) {
     switch(action.type) {
-        case "CRETE_POST":
+        case "CREATE_POST":
             return [...state, { ...action.post }];
         default:
             return state;
